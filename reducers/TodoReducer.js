@@ -1,3 +1,5 @@
+import { VisibilityFilters } from '../actions/VisibilityFilters';
+
 const initState = {
     items: [
         {
@@ -91,6 +93,8 @@ function EDIT_ITEM(state, action) {
     return { ...state, items};  
 }
 
+/* Далее сохраним измененное значение */
+
 function UPDATE_ITEM(state, action) {
     
     let items = state.items.map((item, i) => {
@@ -106,5 +110,24 @@ function UPDATE_ITEM(state, action) {
  
 }
 
+/* Фильтр */
+
+export const getVisibleTodos = (todo, filter) => {
+ 
+    switch (filter) {
+      case VisibilityFilters.SHOW_ALL:
+        return todo;
+      case VisibilityFilters.SHOW_COMPLETED:
+        return todo.filter(t => {
+            return t.completed;
+        });
+      case VisibilityFilters.SHOW_ACTIVE:
+        return todo.filter(t => {
+            return !t.completed;
+        });
+      default:
+        throw new Error('Unknown filter: ' + filter);
+    }
+  }
 
 export default TodoReducer;

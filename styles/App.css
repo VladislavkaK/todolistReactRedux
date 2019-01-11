@@ -30,3 +30,10 @@
     transform: rotate(360deg);
   }
 } */
+.FilterContainer {
+  padding-bottom: 15px;
+}
+
+.noneMarker{
+  list-style-type: none; /* Убираем маркеры */
+}

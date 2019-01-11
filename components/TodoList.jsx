@@ -48,6 +48,7 @@ class TodoList extends React.Component {
 
                     <input type="submit" value="Добавить" />
                 </form>
+                
                 <Items items={items} />
             </div>
         );
@@ -70,7 +71,7 @@ export function mapStateToProps(state) {
     // console.log(state.todo)
     return {
         'items': state.todo.items, // передаем в props данные которые находятся в state по умолчанию
-        // 'completed': state.todo.completed
+        // 'completed': state.todo.completed 
     };
 
 }
