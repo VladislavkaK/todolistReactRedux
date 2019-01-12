@@ -12,6 +12,7 @@ class FilterLink extends React.Component {
             <button
                 onClick={onClick}
                 disabled={active}
+                className="btn btn-primary"
                 style={{
                     marginLeft: '4px',
                 }}

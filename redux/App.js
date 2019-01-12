@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <Provider store={store}>
 
-        <div className="TODOLIST">
-          <h1>TODO list</h1>
+        <div className="container">
+          <h1 className="text-center">TODO list</h1>
           <ListContainer />
         </div>
         

@@ -9,7 +9,7 @@ class FilterLinkContainer extends Component {
 
     render () {
         return (
-            <div className="FilterContainer">
+            <div className="text-center">
                 <FilterLink filter={VisibilityFilters.SHOW_ALL}>
                     All
                 </FilterLink>
